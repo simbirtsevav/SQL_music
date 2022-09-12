@@ -198,7 +198,13 @@ INSERT INTO  musiciangenre (musician_id, genre_id)
 VALUES('1', '1');
 
 INSERT INTO  musiciangenre (musician_id, genre_id)
+VALUES('1', '4');
+
+INSERT INTO  musiciangenre (musician_id, genre_id)
 VALUES('2', '3');
+
+INSERT INTO  musiciangenre (musician_id, genre_id)
+VALUES('2', '5');
 
 INSERT INTO  musiciangenre (musician_id, genre_id)
 VALUES('3', '2');
