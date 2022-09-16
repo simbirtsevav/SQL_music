@@ -10,20 +10,22 @@ SELECT album_name, AVG(track_duration) FROM track t
 JOIN album a ON t.album_id = a.album_id
 GROUP by album_name;
 
+
 SELECT musician_name FROM musician m
+WHERE musician_name not in(select musician_name FROM musician m
 JOIN musicianalbum ma ON m.musician_id = ma.musician_id
 JOIN album a ON ma.album_id = a.album_id
-WHERE album_year != '2020'
-GROUP BY musician_name
+WHERE album_year = '2020')
+ 
 
-SELECT collection_name FROM collection c
+SELECT DISTINCT collection_name FROM collection c
 JOIN collectiontrack ct ON ct.collection_id = c.collection_id 
 JOIN track t ON ct.track_id = t.track_id 
 JOIN album a ON t.album_id = a.album_id 
 JOIN musicianalbum m ON a.album_id = m.album_id 
 JOIN musician mu ON m.musician_id = mu.musician_id 
 WHERE Musician_name = 'Sidorov'
-GROUP BY collection_name;
+
 
 SELECT album_name FROM album a
 JOIN musicianalbum ma ON a.album_id = ma.musician_id 
